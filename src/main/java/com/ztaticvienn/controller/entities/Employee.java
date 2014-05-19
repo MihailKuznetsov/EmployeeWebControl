@@ -15,6 +15,8 @@ public abstract class Employee {
 
     private Date dateOfBirth;
 
+    private Double salary;
+
     public Integer getId() {
         return id;
     }
@@ -45,6 +47,14 @@ public abstract class Employee {
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 
     public abstract Double calculateSalary();

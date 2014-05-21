@@ -6,6 +6,6 @@ package com.ztaticvienn.controller.entities;
 public class FixedSalaryEmployee extends Employee {
     @Override
     public Double calculateSalary() {
-        return null;
+        return this.getSalary();
     }
 }

@@ -12,7 +12,9 @@ public class ShowServlet extends javax.servlet.http.HttpServlet {
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)
             throws javax.servlet.ServletException, IOException {
 
+
         response.setContentType("text/html;charset=utf-8");
+        response.getWriter();
         request.getRequestDispatcher("/showemployees.jsp").include(request, response);
 
     }

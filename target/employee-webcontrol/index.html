@@ -8,16 +8,29 @@
 <body>
 <h2>Welcome!</h2>
     <div class="dialogform">
+        <div>
+            <form action="/add.html">
+                <input type="submit" value="Add" class="button">
+            </form>
+        </div>
+        <div>
+            <form action="/show">
+                <input type="submit" value="Show" class="button">
+            </form>
+        </div>
 
-        <form action="/add.html">
-            <input type="submit" value="Add" class="button">
-        </form>
-        <form action="show">
-            <input type="submit" value="Show" class="button">
-        </form>
-        <form>
-            <input type="submit" value="Sort" class="button">
-        </form>
+        <div style="clear:both">
+            <form action="/sort">
+                </br>Sort by:</br>
+                <input type="radio" name="sortBy" value="id">id</br>
+                <input type="radio" name="sortBy" value="name">name</br>
+                <input type="radio" name="sortBy" value="surname">surname</br>
+                <input type="radio" name="sortBy" value="date">date of birth</br>
+                <input type="radio" name="sortBy" value="salary">salary</br>
+                <input type="submit" value="Sort" class="button"></br>
+            </form>
+        </div>
+
     </div>
 
 </body>

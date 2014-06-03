@@ -21,5 +21,6 @@ public class SortServlet extends HttpServlet{
 
     Company.getInstance().sortEmployees(request.getParameter("sort"));
 
+
     }
 }

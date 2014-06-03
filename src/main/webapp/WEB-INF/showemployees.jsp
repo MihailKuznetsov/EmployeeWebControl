@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<div>
+<div class="dialogform">
     <table border="solid">
         <c:forEach items="${list}" var="employee">
             <tr>

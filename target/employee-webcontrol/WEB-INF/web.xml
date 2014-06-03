@@ -9,11 +9,6 @@
     </listener>
 
     <servlet>
-        <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>com.ztaticvienn.controller.web.IndexServlet</servlet-class>
-    </servlet>
-
-    <servlet>
         <servlet-name>ShowServlet</servlet-name>
         <servlet-class>com.ztaticvienn.controller.web.ShowServlet</servlet-class>
     </servlet>
@@ -22,11 +17,11 @@
         <servlet-name>AddServlet</servlet-name>
         <servlet-class>com.ztaticvienn.controller.web.AddServlet</servlet-class>
     </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>IndexServlet</servlet-name>
-        <url-pattern>/index</url-pattern>
-    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SortServlet</servlet-name>
+        <servlet-class>com.ztaticvienn.controller.web.AddServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>ShowServlet</servlet-name>
@@ -36,6 +31,11 @@
     <servlet-mapping>
         <servlet-name>AddServlet</servlet-name>
         <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SortServlet</servlet-name>
+        <url-pattern>/sort</url-pattern>
     </servlet-mapping>
 
 

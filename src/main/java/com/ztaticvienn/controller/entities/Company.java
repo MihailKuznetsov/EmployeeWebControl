@@ -4,6 +4,7 @@ import com.ztaticvienn.controller.comparator.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,6 +37,17 @@ public class Company {
 
     private Company() {
 
+    }
+
+    public void addEmployee(Integer id, String name, String surname, Date dateOfBirth, Double salary, String salaryType){
+        Employee newEmployee = null;
+        if(salaryType.equals("fixedsalary")){
+            newEmployee = new FixedSalaryEmployee(id, name, surname, dateOfBirth, salary);
+        } else if(salaryType.equals("hourlywage")){
+            newEmployee = new HourlyWageEmployee(id, name, surname, dateOfBirth, salary);
+        }
+
+        employees.add(newEmployee);
     }
 
     public  void sortEmployees(String sortBy){

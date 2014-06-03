@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div class="dialogform">
+    <form action="/add" method="POST">
+        <div>
+
+            <div class="label">Id:</div>
+            <div class="enterfield"><input type="text" size="10" name="id"></div>
+        </div>
+        <div>
+            <div class="label">First name:</div>
+            <div class="enterfield"><input type="text" size="20" name="name"></div>
+        </div>
+        <div>
+            <div class="label">Last name:</div>
+            <div class="enterfield"><input type="text" size="20" name="surname"></div>
+        </div>
+        <div>
+            <div class="label">DateOfBirth: (yyyy-dd-mm)</div>
+            <div class="enterfield"><input type="text" size="20" name="dateofbirth"></div>
+        </div>
+        <div>
+            <div class="label">Salary:</div>
+            <div class="enterfield"><input type="text" size="20" name="salary"></div>
+        </div>
+        <div>
+            <div class="label">SalaryType:</div>
+            <div class="radiobutton">
+                <input type="radio" name="salarytype" value="fixedsalary">Fixed salary
+                <input type="radio" name="salarytype" value="hourlywages">Hourly wages
+            </div>
+
+
+        </div>
+        <div>
+            <div>
+                <input type="submit" value="Add" class="button" />
+            </div>
+        </div>
+    </form>
+
+
+</div>
+</body>
+</html>

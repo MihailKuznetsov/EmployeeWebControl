@@ -8,7 +8,7 @@
           <element id="module-output" name="employee-webcontrol" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="application" name="mysql-connector-java-5.1.30-bin" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.30" />
         </element>
       </element>
     </root>

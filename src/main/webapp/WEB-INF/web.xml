@@ -1,16 +1,44 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+
+    <listener>
+        <listener-class>com.ztaticvienn.controller.web.listeners.ServletContext</listener-class>
+    </listener>
+
     <servlet>
-        <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>com.ztaticvienn.controller.servlets.IndexServlet</servlet-class>
+        <servlet-name>ShowServlet</servlet-name>
+        <servlet-class>com.ztaticvienn.controller.web.ShowServlet</servlet-class>
     </servlet>
-    
+
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>com.ztaticvienn.controller.web.AddServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SortServlet</servlet-name>
+        <servlet-class>com.ztaticvienn.controller.web.AddServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
-        <servlet-name>IndexServlet</servlet-name>
+        <servlet-name>ShowServlet</servlet-name>
         <url-pattern>/show</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SortServlet</servlet-name>
+        <url-pattern>/sort</url-pattern>
+    </servlet-mapping>
+
+
+
+
 </web-app>

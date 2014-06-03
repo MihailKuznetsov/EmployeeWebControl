@@ -20,8 +20,6 @@ public class Runner {
             +"typesalary ENUM('fixedsalary','hourlywages') NOT NULL,"
             +"UNIQUE (id));";
 
-    private static final String ADD_REQUEST = "INSERT INTO employees (id, name, surname, birthdate, salary, typesalary)" +
-            "VALUES ('1','John','Smith','1985-06-15','600.5','hourlywages')";
 
     private static final String DROP_REQUEST = "DROP TABLE IF EXISTS employees";
 
@@ -33,7 +31,6 @@ public class Runner {
             //System.out.println(REQUEST);
             conn.createStatement().execute(DROP_REQUEST);
             conn.createStatement().execute(REQUEST);
-            conn.createStatement().execute(ADD_REQUEST);
 
             ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM employees ORDER BY id;");
             while (rs.next() == true){

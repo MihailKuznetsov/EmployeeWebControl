@@ -1,11 +1,18 @@
 package com.ztaticvienn.controller.entities;
 
+import com.ztaticvienn.controller.util.DateParser;
+
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * Created by mike on 16.05.14.
  */
-public abstract class Employee {
+public abstract class Employee{
 
     private Integer id;
 
@@ -42,11 +49,20 @@ public abstract class Employee {
     }
 
     public Date getDateOfBirth() {
-        return dateOfBirth;
+
+        return  dateOfBirth;
     }
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getDateOfBirthString(){
+        return DateParser.getStringFromDate(this.dateOfBirth);
+    }
+
+    public void setDateOfBirthString(String dateOfBirth){
+        this.dateOfBirth=DateParser.getDateFromString(dateOfBirth);
     }
 
     public Double getSalary() {
@@ -57,6 +73,33 @@ public abstract class Employee {
         this.salary = salary;
     }
 
+
+
     public abstract Double calculateSalary();
+
+    public Employee(Integer id, String name, String surname, Date dateOfBirth, Double salary){
+        this.id=id;
+        this.name=name;
+        this.surname=surname;
+        this.dateOfBirth=dateOfBirth;
+        this.salary=salary;
+    }
+
+    public String getEmployeeType(){
+        if(this instanceof FixedSalaryEmployee)
+        return "fixedsalary";
+        else if(this instanceof HourlyWageEmployee)
+        return "hourlywages";
+
+        return "undefined";
+    }
+
+
+
+    @Override
+    public String toString(){
+        return getId()+" "+getName()+" "+getSurname()+" "+ DateParser.getStringFromDate(getDateOfBirth())+" "+getSalary()+" "+getEmployeeType();
+    }
+
 }
 
